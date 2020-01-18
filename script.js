@@ -1,8 +1,7 @@
 function playAudio(e) {
   const audioElement = document.querySelector(`audio[data-key="${e.keyCode}"]`)
 
-  // get keycode from event with "key" class
-  const key = document.querySelector(`.key[data-key="${e.keyCode}"]`)
+  const key = document.querySelector(`.key[data-key="${e.keyCode}"]`) // get keycode from event with "key" class
 
   if (!audioElement) return // stop function if keyCode pressed is not found
   audioElement.currentTime = 0 // reset playing time to 0, so that it plays instantly
